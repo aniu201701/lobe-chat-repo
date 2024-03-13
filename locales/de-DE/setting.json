@@ -1,4 +1,14 @@
 {
+  "about": {
+    "title": "Über"
+  },
+  "analytics": {
+    "telemetry": {
+      "desc": "Durch das Senden von Telemetriedaten können Sie uns dabei helfen, die Gesamtnutzererfahrung von LobeChat zu verbessern",
+      "title": "Anonyme Nutzungsdaten senden"
+    },
+    "title": "Analytics"
+  },
   "danger": {
     "clear": {
       "action": "Alle löschen",
@@ -21,6 +31,14 @@
     "sessionWithName": "Sitzungseinstellungen · {{name}}"
   },
   "llm": {
+    "Anthropic": {
+      "title": "Anthropic",
+      "token": {
+        "desc": "Geben Sie den API-Schlüssel von Anthropic ein",
+        "placeholder": "Anthropic API-Schlüssel",
+        "title": "API-Schlüssel"
+      }
+    },
     "AzureOpenAI": {
       "azureApiVersion": {
         "desc": "Die API-Version von Azure, die dem Format JJJJ-MM-TT folgt. Siehe [Neueste Version](https://learn.microsoft.com/de-de/azure/ai-services/openai/reference#chat-completions)",
@@ -73,6 +91,14 @@
       "token": {
         "desc": "Geben Sie den API-Schlüssel von Google ein",
         "placeholder": "Google API Key",
+        "title": "API-Schlüssel"
+      }
+    },
+    "Mistral": {
+      "title": "Mistral KI",
+      "token": {
+        "desc": "Geben Sie den API-Schlüssel von Mistral KI ein",
+        "placeholder": "Mistral KI API-Schlüssel",
         "title": "API-Schlüssel"
       }
     },
@@ -138,8 +164,16 @@
         "title": "Azure OpenAI verwenden"
       }
     },
+    "Perplexity": {
+      "title": "perplexity",
+      "token": {
+        "desc": "Geben Sie den API-Schlüssel von Perplexity AI ein",
+        "placeholder": "Perplexity AI API-Schlüssel",
+        "title": "API-Schlüssel"
+      }
+    },
     "Zhipu": {
-      "title": "智谱",
+      "title": "Zhipu AI",
       "token": {
         "desc": "Geben Sie den API-Schlüssel von Zhipu ein",
         "placeholder": "Zhipu API Key",
@@ -370,6 +404,7 @@
     "tooltips": "Auf dem Assistentenmarkt teilen"
   },
   "tab": {
+    "about": "Über",
     "agent": "Standard-Assistent",
     "common": "Allgemeine Einstellungen",
     "llm": "Sprachmodell",

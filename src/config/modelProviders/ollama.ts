@@ -3,6 +3,28 @@ import { ModelProviderCard } from '@/types/llm';
 const Ollama: ModelProviderCard = {
   chatModels: [
     {
+      displayName: 'Gemma 7B',
+      functionCall: false,
+      id: 'gemma',
+      tokens: 4000,
+      vision: false,
+    },
+    {
+      displayName: 'Gemma 2B',
+      functionCall: false,
+      id: 'gemma:2b',
+      tokens: 4000,
+      vision: false,
+    },
+    {
+      displayName: 'Llama2 Chat 13B',
+      functionCall: false,
+      hidden: true,
+      id: 'llama2:13b',
+      tokens: 4000,
+      vision: false,
+    },
+    {
       displayName: 'Llama2 Chat 7B',
       functionCall: false,
       id: 'llama2',
@@ -66,7 +88,7 @@ const Ollama: ModelProviderCard = {
     {
       displayName: 'Qwen Chat 7B',
       functionCall: false,
-      id: 'qwen:7b-chat',
+      id: 'qwen:7b',
       tokens: 32_768,
       vision: false,
     },
@@ -74,15 +96,15 @@ const Ollama: ModelProviderCard = {
       displayName: 'Qwen Chat 14B',
       functionCall: false,
       hidden: true,
-      id: 'qwen:14b-chat',
+      id: 'qwen:14b',
       tokens: 32_768,
       vision: false,
     },
     {
-      displayName: 'Qwen Chat 70B',
+      displayName: 'Qwen Chat 72B',
       functionCall: false,
       hidden: true,
-      id: 'qwen:70b-chat',
+      id: 'qwen:72b',
       tokens: 32_768,
       vision: false,
     },

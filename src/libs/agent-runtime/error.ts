@@ -20,11 +20,20 @@ export const AgentRuntimeErrorType = {
   InvalidBedrockCredentials: 'InvalidBedrockCredentials',
   BedrockBizError: 'BedrockBizError',
 
+  InvalidMistralAPIKey: 'InvalidMistralAPIKey',
+  MistralBizError: 'MistralBizError',
+
   InvalidMoonshotAPIKey: 'InvalidMoonshotAPIKey',
   MoonshotBizError: 'MoonshotBizError',
 
   InvalidOllamaArgs: 'InvalidOllamaArgs',
   OllamaBizError: 'OllamaBizError',
+
+  InvalidPerplexityAPIKey: 'InvalidPerplexityAPIKey',
+  PerplexityBizError: 'PerplexityBizError',
+
+  InvalidAnthropicAPIKey: 'InvalidAnthropicAPIKey',
+  AnthropicBizError: 'AnthropicBizError',
 } as const;
 
 export type ILobeAgentRuntimeErrorType =

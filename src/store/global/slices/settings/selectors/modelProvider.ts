@@ -1,12 +1,15 @@
 import { produce } from 'immer';
 
 import {
+  AnthropicProvider,
   BedrockProvider,
   GoogleProvider,
   LOBE_DEFAULT_MODEL_LIST,
+  MistralProvider,
   MoonshotProvider,
   OllamaProvider,
   OpenAIProvider,
+  PerplexityProvider,
   ZhiPuProvider,
 } from '@/config/modelProviders';
 import { ChatModelCard, ModelProviderCard } from '@/types/llm';
@@ -39,6 +42,9 @@ const googleProxyUrl = (s: GlobalStore) => modelProvider(s).google.endpoint;
 const enableAzure = (s: GlobalStore) => modelProvider(s).openAI.useAzure;
 const azureConfig = (s: GlobalStore) => modelProvider(s).azure;
 
+const enableMistral = (s: GlobalStore) => modelProvider(s).mistral.enabled;
+const mistralAPIKey = (s: GlobalStore) => modelProvider(s).mistral.apiKey;
+
 const enableMoonshot = (s: GlobalStore) => modelProvider(s).moonshot.enabled;
 const moonshotAPIKey = (s: GlobalStore) => modelProvider(s).moonshot.apiKey;
 
@@ -47,6 +53,12 @@ const enableOllamaConfigInSettings = (s: GlobalStore) =>
 
 const enableOllama = (s: GlobalStore) => modelProvider(s).ollama.enabled;
 const ollamaProxyUrl = (s: GlobalStore) => modelProvider(s).ollama.endpoint;
+
+const enablePerplexity = (s: GlobalStore) => modelProvider(s).perplexity.enabled;
+const perplexityAPIKey = (s: GlobalStore) => modelProvider(s).perplexity.apiKey;
+
+const enableAnthropic = (s: GlobalStore) => modelProvider(s).anthropic.enabled;
+const anthropicAPIKey = (s: GlobalStore) => modelProvider(s).anthropic.apiKey;
 
 // const azureModelList = (s: GlobalStore): ModelProviderCard => {
 //   const azure = azureConfig(s);
@@ -133,6 +145,9 @@ const modelSelectList = (s: GlobalStore): ModelProviderCard[] => {
     { ...GoogleProvider, enabled: enableGoogle(s) },
     { ...BedrockProvider, enabled: enableBedrock(s) },
     { ...OllamaProvider, chatModels: ollamaChatModels, enabled: enableOllama(s) },
+    { ...PerplexityProvider, enabled: enablePerplexity(s) },
+    { ...AnthropicProvider, enabled: enableAnthropic(s) },
+    { ...MistralProvider, enabled: enableMistral(s) },
   ];
 };
 
@@ -203,4 +218,16 @@ export const modelProviderSelectors = {
   enableOllamaConfigInSettings,
   enableOllama,
   ollamaProxyUrl,
+
+  // Perplexity
+  enablePerplexity,
+  perplexityAPIKey,
+
+  // Anthropic
+  enableAnthropic,
+  anthropicAPIKey,
+  
+  // Mistral
+  enableMistral,
+  mistralAPIKey,
 };

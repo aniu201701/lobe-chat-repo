@@ -1,6 +1,6 @@
 import { ModelProviderCard } from '@/types/llm';
 
-// ref https://api.together.xyz/models
+// ref https://docs.together.ai/docs/inference-models
 const TogetherAI: ModelProviderCard = {
   chatModels: [
     {
@@ -88,7 +88,7 @@ const TogetherAI: ModelProviderCard = {
       enabled: true,
       functionCall: false,
       id: 'Qwen/Qwen1.5-72B-Chat',
-      tokens: 4096,
+      tokens: 32_768,
       vision: false,
     },
   ],

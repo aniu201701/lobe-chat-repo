@@ -36,11 +36,10 @@ export const POST = checkAuth(async (req: Request, { params, jwtPayload }) => {
 
     try {
       console.log(`Chat: [${provider}] : ${JSON.stringify(data.messages)}`);
+    } catch (e) {
+      console.error('Log error:', e);
     }
-    catch (e) {
-      console.error('Log error: ', e);
-    }
-    
+
     return await agentRuntime.chat(data, { user: jwtPayload.userId, ...traceOptions });
   } catch (e) {
     const {
